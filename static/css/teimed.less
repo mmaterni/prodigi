@@ -1313,7 +1313,9 @@ div.text_pannel {
 
       //AAA sic
 
-      //sic diplomatica isolato ed in in choice
+      //sic diplomatica isolato 
+      //sic diplomatica in choice
+      // contenuto(sic!)
       span.sic {
         // background-color: red !important;
       }
@@ -1327,7 +1329,15 @@ div.text_pannel {
         margin-left: -4px;
       }
 
+      // sic interpretativa in choice
+      // no display
+      span.sic_int {
+        // background-color: red !important;
+        display: none;
+      }
+
       /* sic interpretativa isolato (settao da javascript)  */
+      // contento(sic!)
       span.sic_u {
         // background-color: red !important;
       }
@@ -1341,19 +1351,16 @@ div.text_pannel {
         margin-left: -4px;
       }
 
-      // sic interpretativa in choice
-      span.sic_int {
-        // background-color: red !important;
-        display: none;
-      }
 
       //AAA coor
-      // corr iplomatica in choicew
+      // corr dplomatica in choice
+      // no display
       span.corr {
         display: none;
       }
 
       //corr interpretativa in choice
+      // contenuto => popu(contenuto sic)
       span.corr_int {
         // background-color: red !important;
         position: relative;
@@ -1361,7 +1368,6 @@ div.text_pannel {
         //     font-size: 0;
         //     // color:white;
         //   }
-
         .w::after {
           content: "*";
           font-size: @tooltip-after-font-size;
@@ -1392,7 +1398,9 @@ div.text_pannel {
       }
 
       /////////////////////////////////////
-      // //corr in diplomatica
+      
+      //corr diplomatica isolato
+      // [contenuto[
       // span.corr {
       //   // display: none;
       //   .w::before {
@@ -1403,6 +1411,13 @@ div.text_pannel {
       //   }
       // }
 
+      // //corr interpretativa isolato
+      // * => popup [contenuto]
+      // span.corr {
+      // }
+
+      
+      
       /* gestione capitalize */
       span.persname {
       }
