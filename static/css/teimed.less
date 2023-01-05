@@ -1313,7 +1313,7 @@ div.text_pannel {
 
       //AAA sic
 
-      //sic diplomatica isolato 
+      //sic diplomatica isolato
       //sic diplomatica in choice
       // contenuto(sic!)
       span.sic {
@@ -1350,7 +1350,6 @@ div.text_pannel {
         font-weight: bold;
         margin-left: -4px;
       }
-
 
       //AAA coor
       // corr dplomatica in choice
@@ -1398,26 +1397,53 @@ div.text_pannel {
       }
 
       /////////////////////////////////////
-      
+
       //corr diplomatica isolato
-      // [contenuto[
-      // span.corr {
-      //   // display: none;
-      //   .w::before {
-      //     content: "[";
-      //   }
-      //   .w::after {
-      //     content: "]";
-      //   }
-      // }
+      // [contenuto]
+      span.corr_u {
+        // background-color: red !important;
+        &::before {
+          content: "[";
+        }
+        &::after {
+          content: "]";
+        }
+      }
 
       // //corr interpretativa isolato
       // * => popup [contenuto]
-      // span.corr {
-      // }
+      span.corr_u_int {
+        font-size: 0;
+        position: relative;
+        &::after {
+          content: "*";
+          font-size: @tooltip-after-font-size;
+          font-weight: bold;
+          vertical-align: top;
+          color: @a-tip-color;
+          background: @a-tip-back;
+        }
+      }
 
-      
-      
+      span.corr_u_int:hover::after {
+        content: attr(tooltip);
+        background: @tip-back;
+        color: @tip-color;
+        text-align: center;
+        vertical-align: top;
+        font-weight: normal;
+        font-size: @tip-font-size;
+        border: 1px solid @tip-border-color;
+        border-radius: 6px;
+        position: absolute;
+        padding: 2px 2px 2px 2px;
+        z-index: 1;
+        bottom: 90%;
+        top: -20px;
+        right: -30px;
+        margin-left: 0;
+      }
+
       /* gestione capitalize */
       span.persname {
       }
