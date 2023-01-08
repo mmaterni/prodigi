@@ -114,3 +114,22 @@ var open_pag = function (url) {
 close_pag = function () {
   woppag.close();
 };
+
+var wopula;
+var open_ularead = function () {
+  //AAA const url="http://127.0.0.1:5502/ularead/";
+  const url="http://martamaterni.it/ularead.html";
+  let op = `width=1200,height=900, top=100,left=100,
+    scrollbars=1,
+    resizable=1,
+    toolbar=0,
+    status=0,
+    menubar=0,
+    titlebar=0 `;
+    wopula = window.open("", "", op);
+    wopula.location.href = url;
+};
+
+close_ularead = function () {
+  wopula.close();
+};
