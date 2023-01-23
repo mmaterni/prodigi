@@ -3742,7 +3742,8 @@ def run(app=None,
     except:
         if not reloader: raise
         if not getattr(server, 'quiet', quiet):
-            print_exc()
+            # print_exc() AAA
+            pass
         time.sleep(interval)
         sys.exit(3)
 
