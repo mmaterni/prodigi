@@ -42,8 +42,13 @@ var loadPannel = function (cod) {
     UaWait.show();
     const text_info = TextInfoLst[cod];
     const url = text_info.url || "url null";
-    fetch(url)
-        .then((resp) => {
+    //AAA fetch(url)
+    fetch(url, {
+        method: 'GET',
+        headers: { "Content-Type": "text/plain;charset=UTF-8" },
+        cache: 'no-store'
+      })
+            .then((resp) => {
             if (resp.ok) return resp.text();
         })
         .then((text) => {
@@ -384,8 +389,13 @@ var UaFl = {
         UaWait.show();
         const url = EpsMgr.getUrl(cod, eps_num) || "url null";
         console.log("=> url: " + url);
-        fetch(url)
-            .then((resp) => {
+        //AAA fetch(url)
+        fetch(url, {
+            method: 'GET',
+            headers: { "Content-Type": "text/plain;charset=UTF-8" },
+            cache: 'no-store'
+          })
+                    .then((resp) => {
                 if (resp.ok) return resp.text();
             })
             .then((text) => {
@@ -659,7 +669,13 @@ var TeiHelp = {
             $(TeiHelp.id).show();
         };
         const url = "html/flsynhelp.html";
-        fetch(url)
+        //AAA fetch(url)
+        fetch(url, {
+            method: 'GET',
+            headers: { "Content-Type": "text/plain;charset=UTF-8" },
+            cache: 'no-store'
+          })
+        
             .then((resp) => {
                 if (resp.ok) return resp.text();
                 else throw `status:${resp.status}`;

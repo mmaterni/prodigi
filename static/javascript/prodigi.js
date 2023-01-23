@@ -11,7 +11,12 @@ var florimon_init = function (url) {
 
 var pag = async function (pag) {
   const url = "./pag/" + pag;
-  fetch(url)
+  // AAA fetch(url)
+  fetch(url, {
+    method: 'GET',
+    headers: { "Content-Type": "text/plain;charset=UTF-8" },
+    cache: 'no-store'
+  })
   .then((resp) => {
       if (resp.ok) return resp.text();
       else throw `ERROR\n${url}`;      

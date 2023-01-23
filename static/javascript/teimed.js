@@ -69,17 +69,20 @@ const getTeiMed = function (text_cod) {
     const url = info.url || "url non indefinito";
     UaWait.show();
     //legge il pannello con la barra verticale
-    fetch(url)
-        .then((resp) => {
-            if (resp.ok) return resp.text();
-        })
-        .then((text) => {
-            // console.log("1 getTeimed()");
-            document.getElementById('ua').innerHTML = "";
-            document.getElementById('ua').innerHTML = text;
-            UaFl.init(text_cod);
-            UaWait.hide();
-        })
+    // AAA fetch(url)
+    fetch(url, {
+        method: 'GET',
+        headers: { "Content-Type": "text/plain;charset=UTF-8" },
+        cache: 'no-store'
+    }).then((resp) => {
+        if (resp.ok) return resp.text();
+    }).then((text) => {
+        // console.log("1 getTeimed()");
+        document.getElementById('ua').innerHTML = "";
+        document.getElementById('ua').innerHTML = text;
+        UaFl.init(text_cod);
+        UaWait.hide();
+    })
         .catch((error) => {
             alert(`ERROR getTeimed()\n${url}\n${error}`);
         });
@@ -802,80 +805,83 @@ var UaBarVert = {
     showEpsNum: function (eps_num) {
         UaWait.show();
         const url = EpsMgr.getUrl(eps_num);
-        fetch(url)
-            .then((resp) => {
-                if (resp.ok) return resp.text();
-            })
-            .then((text) => {
-                EpsMgr.removeAll();
-                // TODO rimuovere in segito
-                if (!text) {
-                    UaWait.hide();
-                    return;
-                }
-                try {
-                    //separa diplomatica da interpretativa
-                    const dip_int = text.split("\n");
+        //AAA fetch(url) 
+        fetch(url, {
+            method: 'GET',
+            headers: { "Content-Type": "text/plain;charset=UTF-8" },
+            cache: 'no-store'
+        }).then((resp) => {
+            if (resp.ok) return resp.text();
+        }).then((text) => {
+            EpsMgr.removeAll();
+            // TODO rimuovere in segito
+            if (!text) {
+                UaWait.hide();
+                return;
+            }
+            try {
+                //separa diplomatica da interpretativa
+                const dip_int = text.split("\n");
 
-                    //TODO modifiare appoggio dipèlomatica ed interpretativa
-                    /*
-                    //id utilizzato temporaneamente per div_tex diplomatica e interpretativa
-                    let eps_tmp = document.getElementById('eps_id');
-                    //dipomatica
-                    eps_tmp.innerHTML = dip_int[0];
-                    //TDI probabilment einutile
-                    const epd = eps_tmp.querySelector(".div_text");
-                    //html diplomatic
-                    const hd = epd.innerHTML;
-                    //interpretativa
-                    eps_tmp.innerHTML = dip_int[1];
-                    const epi = eps_tmp.querySelector(".div_text");
-                    //html interpretativa
-                    const hi = epi.innerHTML;
-                    //annullamento eps_id
-                    document.getElementById('eps_id').innerHTML = '';
-                    */
-                    const hd = dip_int[0];
-                    const hi = dip_int[1];
+                //TODO modifiare appoggio dipèlomatica ed interpretativa
+                /*
+                //id utilizzato temporaneamente per div_tex diplomatica e interpretativa
+                let eps_tmp = document.getElementById('eps_id');
+                //dipomatica
+                eps_tmp.innerHTML = dip_int[0];
+                //TDI probabilment einutile
+                const epd = eps_tmp.querySelector(".div_text");
+                //html diplomatic
+                const hd = epd.innerHTML;
+                //interpretativa
+                eps_tmp.innerHTML = dip_int[1];
+                const epi = eps_tmp.querySelector(".div_text");
+                //html interpretativa
+                const hi = epi.innerHTML;
+                //annullamento eps_id
+                document.getElementById('eps_id').innerHTML = '';
+                */
+                const hd = dip_int[0];
+                const hi = dip_int[1];
 
-                    let ref = EpsMgr.ref_array[eps_num];
-                    let ep_d_lst = $('#pannel_dip_id  div.div_text').toArray();
-                    let ep_d = null;
-                    for (let i = 0; i < ep_d_lst.length; i++) {
-                        if ($(ep_d_lst[i]).attr('ref') == ref) {
-                            ep_d = ep_d_lst[i];
-                            break;
-                        }
+                let ref = EpsMgr.ref_array[eps_num];
+                let ep_d_lst = $('#pannel_dip_id  div.div_text').toArray();
+                let ep_d = null;
+                for (let i = 0; i < ep_d_lst.length; i++) {
+                    if ($(ep_d_lst[i]).attr('ref') == ref) {
+                        ep_d = ep_d_lst[i];
+                        break;
                     }
-                    $(ep_d).html(hd);
+                }
+                $(ep_d).html(hd);
 
-                    let ep_i_lst = $('#pannel_int_id  div.div_text').toArray();
-                    let ep_i = null;
-                    for (let i = 0; i < ep_i_lst.length; i++) {
-                        if ($(ep_i_lst[i]).attr('ref') == ref) {
-                            ep_i = ep_i_lst[i];
-                            break;
-                        }
+                let ep_i_lst = $('#pannel_int_id  div.div_text').toArray();
+                let ep_i = null;
+                for (let i = 0; i < ep_i_lst.length; i++) {
+                    if ($(ep_i_lst[i]).attr('ref') == ref) {
+                        ep_i = ep_i_lst[i];
+                        break;
                     }
-                    $(ep_i).html(hi);
+                }
+                $(ep_i).html(hi);
 
-                    TeimedCss.setTeimCss();
-                    UaFl.onSelectNote();
-                    //TODO UaFl.onSelectLine(); 
-                    UaFl.syncPannelScroll();
-                    UaFl.setEpsNum(eps_num, ep_d, ep_i);
-                    UaBarVert.pagList(eps_num);
-                    const html_eps_arr = UaBarVert.htmlEpsList(eps_num);
-                    const html_pag_arr = UaBarVert.htmlPagList();
-                    const html = html_eps_arr + html_pag_arr;
-                    $('#barv_text_id').html(html).show();
-                    UaBarVert.showPagNum(0);
-                    UaWait.hide();
-                }
-                catch (err) {
-                    throw new Error("then(text)\n" + err);
-                }
-            })
+                TeimedCss.setTeimCss();
+                UaFl.onSelectNote();
+                //TODO UaFl.onSelectLine(); 
+                UaFl.syncPannelScroll();
+                UaFl.setEpsNum(eps_num, ep_d, ep_i);
+                UaBarVert.pagList(eps_num);
+                const html_eps_arr = UaBarVert.htmlEpsList(eps_num);
+                const html_pag_arr = UaBarVert.htmlPagList();
+                const html = html_eps_arr + html_pag_arr;
+                $('#barv_text_id').html(html).show();
+                UaBarVert.showPagNum(0);
+                UaWait.hide();
+            }
+            catch (err) {
+                throw new Error("then(text)\n" + err);
+            }
+        })
             .catch((error) => {
                 alert(`ERROR showEpsNum()\nurl:${url}\n${error}`);
             });
@@ -946,7 +952,12 @@ var TeiHelp = {
         </div>`;
         const h2 = "</div>";
         const url = "html/flhelp.html";
-        fetch(url)
+        // AAAfetch(url)
+        fetch(url, {
+            method: 'GET',
+            headers: { "Content-Type": "text/plain;charset=UTF-8" },
+            cache: 'no-store'
+        })
             .then((resp) => {
                 if (resp.ok)
                     return resp.text();
