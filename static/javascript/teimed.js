@@ -738,7 +738,7 @@ var TeimedCss = {
                 brk.remove();
             }
         }
-        // XXX intrpretativa rimuove quelle che NON sono interruzioni di w
+        // intrpretativa rimuove quelle che NON sono interruzioni di w
         // const pannel_int = document.querySelector("#pannel_dip_id");
         const pannel_int = document.querySelector("#pannel_int_id");
         const eps_int = pannel_int.querySelectorAll("div.div_text");
@@ -750,7 +750,7 @@ var TeimedCss = {
             }
         }
     },
-    // XXX "sic" isolato NON all'interno di una choice dove è affiancato a "corr" 
+    // "sic" isolato NON all'interno di una choice dove è affiancato a "corr" 
     sic_no_choice: function (ref) {
         const sic_arr = document.querySelectorAll("span.sic_int");
         for (const sic of sic_arr) {
@@ -919,7 +919,7 @@ var UaBarVert = {
     },
     htmlEpsList: function (n) {
         this.eps_list[n].class = 'used';
-        //XXX const template = '<li><a class="{class}" href="javascript:UaBarVert.showEpsNum({i})">{ref}</a></li>';
+        // const template = '<li><a class="{class}" href="javascript:UaBarVert.showEpsNum({i})">{ref}</a></li>';
         const template = '<li><a class="{class}" href="javascript:UaBarVert.showEpsNum({i})">{episode}</a></li>';
         let jt = UaJt();
         jt.append("<div><ul>");
