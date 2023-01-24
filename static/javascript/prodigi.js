@@ -11,11 +11,10 @@ var florimon_init = function (url) {
 
 var pag = async function (pag) {
   const url = "./pag/" + pag;
-  // AAA fetch(url)
   fetch(url, {
     method: 'GET',
     headers: { "Content-Type": "text/plain;charset=UTF-8" },
-    cache: 'no-store'
+    cache: 'default'
   })
   .then((resp) => {
       if (resp.ok) return resp.text();
@@ -122,7 +121,7 @@ close_pag = function () {
 
 var wopula;
 var open_ularead = function () {
-  //AAA const url="http://127.0.0.1:5502/ularead/";
+  //XXX const url="http://127.0.0.1:5502/ularead/";
   const url="http://martamaterni.it/ularead.html";
   let op = `width=1200,height=900, top=100,left=100,
     scrollbars=1,

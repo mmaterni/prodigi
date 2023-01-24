@@ -5,11 +5,10 @@ var UaReq = {
 
   fetch_text: function (url, call) {
     alert("fetch_text()" + url);
-    //AAA fetch(url)
     fetch(url, {
       method: 'GET',
       headers: { "Content-Type": "text/plain;charset=UTF-8" },
-      cache: 'no-store'
+      cache: 'default'
     })
 
       .then((resp) => {

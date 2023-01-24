@@ -69,11 +69,10 @@ const getTeiMed = function (text_cod) {
     const url = info.url || "url non indefinito";
     UaWait.show();
     //legge il pannello con la barra verticale
-    // AAA fetch(url)
     fetch(url, {
         method: 'GET',
         headers: { "Content-Type": "text/plain;charset=UTF-8" },
-        cache: 'no-store'
+        cache: 'default'
     }).then((resp) => {
         if (resp.ok) return resp.text();
     }).then((text) => {
@@ -751,7 +750,7 @@ var TeimedCss = {
             }
         }
     },
-    // AAA "sic" isolato NON all'interno di una choice dove è affiancato a "corr" 
+    // XXX "sic" isolato NON all'interno di una choice dove è affiancato a "corr" 
     sic_no_choice: function (ref) {
         const sic_arr = document.querySelectorAll("span.sic_int");
         for (const sic of sic_arr) {
@@ -805,11 +804,10 @@ var UaBarVert = {
     showEpsNum: function (eps_num) {
         UaWait.show();
         const url = EpsMgr.getUrl(eps_num);
-        //AAA fetch(url) 
         fetch(url, {
             method: 'GET',
             headers: { "Content-Type": "text/plain;charset=UTF-8" },
-            cache: 'no-store'
+            cache: 'default'
         }).then((resp) => {
             if (resp.ok) return resp.text();
         }).then((text) => {
@@ -952,11 +950,10 @@ var TeiHelp = {
         </div>`;
         const h2 = "</div>";
         const url = "html/flhelp.html";
-        // AAAfetch(url)
         fetch(url, {
             method: 'GET',
             headers: { "Content-Type": "text/plain;charset=UTF-8" },
-            cache: 'no-store'
+            cache: 'default'
         })
             .then((resp) => {
                 if (resp.ok)

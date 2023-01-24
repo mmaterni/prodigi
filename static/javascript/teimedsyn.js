@@ -42,11 +42,10 @@ var loadPannel = function (cod) {
     UaWait.show();
     const text_info = TextInfoLst[cod];
     const url = text_info.url || "url null";
-    //AAA fetch(url)
     fetch(url, {
         method: 'GET',
         headers: { "Content-Type": "text/plain;charset=UTF-8" },
-        cache: 'no-store'
+        cache: 'default'
       })
             .then((resp) => {
             if (resp.ok) return resp.text();
@@ -389,11 +388,10 @@ var UaFl = {
         UaWait.show();
         const url = EpsMgr.getUrl(cod, eps_num) || "url null";
         console.log("=> url: " + url);
-        //AAA fetch(url)
         fetch(url, {
             method: 'GET',
             headers: { "Content-Type": "text/plain;charset=UTF-8" },
-            cache: 'no-store'
+            cache: 'default'
           })
                     .then((resp) => {
                 if (resp.ok) return resp.text();
@@ -669,11 +667,10 @@ var TeiHelp = {
             $(TeiHelp.id).show();
         };
         const url = "html/flsynhelp.html";
-        //AAA fetch(url)
         fetch(url, {
             method: 'GET',
             headers: { "Content-Type": "text/plain;charset=UTF-8" },
-            cache: 'no-store'
+            cache: 'default'
           })
         
             .then((resp) => {
