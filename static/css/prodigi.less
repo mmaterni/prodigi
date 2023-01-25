@@ -6,17 +6,10 @@
 @text-width: @body-width - 60px;
 @text-height: 900px;
 @body-height: @text-height+ @menuh-height+ @head-height+ @foot-height;
-
 @head-height: 150px;
-
-// AAA @img-height: @head-height - 10px;
 @img-height: @head-height - 30px;
-
-// AAA @head-text-top: 130px;
 @head-text-top: 120px;
-
-// AAA@head-text-left: 430px;
-@head-text-left: 370px;
+@head-text-left: 330px;
 
 @imgr1-height: 70px;
 @imgr1-width: 80px;
@@ -42,8 +35,6 @@
 // @fsans: arial, verdana, Helvetica, sans-serif;
 
 html {
-  // AAA
-  // box-sizing: border-box;
   font-family: @fserif;
   .back_image;
 }
@@ -217,13 +208,15 @@ div {
     a {
       padding: 0;
       margin: 0;
-        img {
+      max-width: @title-width;
+      min-width: @title-width;
+      img {
         padding: 0;
         margin: 0;
         max-height: @menuh-height;
         min-height: @menuh-height;
-        max-width: @title-width;
-        min-width: @title-width;
+        // max-width: @title-width;
+        // min-width: @title-width;
       }
     }
   }
@@ -240,8 +233,6 @@ div {
     display: block;
     margin: 0;
     padding: 0;
-    // max-height: @menuh-height;
-    // min-height: @menuh-height;
     width: auto;
 
     .b {
@@ -255,8 +246,6 @@ div {
       padding: 0;
       color: inherit;
       background: @menuh-item-back;
-      // max-height: @menuh-height;
-      // min-height: @menuh-height;
       a {
         background: inherit;
         color: inherit;
@@ -266,7 +255,6 @@ div {
         text-align: center;
         padding-right: 10px;
         padding-left: 10px;
-        // padding-bottom: 0px;
         margin: 0;
         text-decoration: none;
         display: block;
