@@ -1,6 +1,12 @@
+/** @format */
 
-.brd1{
-    border:0px solid #ff4500;
+@import "prodigivar.less";
+
+.brd1 {
+  border: 0px solid #ff4500;
+}
+.br0 {
+  background-color: red !important;
 }
 
 div.pagx {
@@ -10,7 +16,7 @@ div.pagx {
   padding: 10px 40px 5px 20px;
   background: #e5e4cb;
   color: #300919;
-  font-size: 19px;
+  font-size: @font-pag;
   font-weight: normal;
   min-height: 930px;
   max-height: 930px;
@@ -21,20 +27,20 @@ div.pagx {
 }
 
 .tit1 {
-  font-size: 25px;
+  font-size: @font-pag-tit1;
   font-weight: bold;
   text-align: center;
   color: #5b112f;
 }
 
 .tit2 {
-  font-size: 24px;
+  font-size: @font-pag-tit2;
   color: #861946;
   text-transform: lowercase;
   font-variant: small-caps;
   font-weight: bold;
   margin-top: 60px;
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
 .tit3 {
@@ -44,7 +50,7 @@ div.pagx {
 }
 
 .tit4 {
-  font-size: 24px;
+  font-size: @font-pag-tit2;
   color: #861946;
   text-transform: lowercase;
   font-variant: small-caps;
@@ -52,7 +58,7 @@ div.pagx {
 }
 
 .version {
-  font-size: 16px;
+  font-size: @font-pag-version;
   font-weight: bold;
   color: #838383;
   margin-top: 10px;
@@ -65,12 +71,12 @@ div.pagx {
 .parcnt {
   text-align: center;
   margin: 15px;
-  font-size: 19px;
+  font-size: @font-pag-parcnt;
 }
 
 .bibliogr {
   text-align: justify;
-  font-size: 17px;
+  font-size: @font-pag-bibliogr;
 }
 .biblio {
   text-indent: 20px;
@@ -83,26 +89,26 @@ div.pagx {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: justify;
-  font-size: 18px;
+  font-size: @font-pag-citl;
   color: #5b112f;
   font-style: italic;
 }
 
 .cits {
-  font-size: 18px;
+  font-size: @font-pag-cits;
   color: #5b112f;
   font-style: italic;
 }
 
 .titwrk {
-    font-style: italic;
-    color: #5b112f;
+  font-style: italic;
+  color: #5b112f;
 }
 
 .site {
-    font-weight: bold;
-    font-variant: small-caps;
-    color: #5b112f;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: #5b112f;
 }
 
 .cit {
@@ -119,55 +125,55 @@ div.pagx {
 }
 
 .bibl {
-  font-size: 15px;
+  font-size: @font-pag-bibl;
   color: #9b1d51;
 }
 
 .url {
-  font-size: 13px;
+  font-size: @font-pag-url;
   color: #838383;
 }
 
 .url1 {
-  font-size: 16px;
+  font-size: @font-pag-url1;
   color: #5b112f;
 }
 
 .source {
-  font-size: 16px;
+  font-size: @font-pag-source;
   color: #838383;
 }
 
 .source1 {
-  font-size: 16px;
+  font-size: @font-pag-source;
   color: #5b112f;
   font-style: italic;
 }
 
 .ins {
-  font-size: 16px;
+  font-size: @font-pag-source;
   font-style: normal;
 }
 
 .list {
-  font-size: 15px;
+  font-size: @font-pag-list;
   color: #5b112f;
   font-weight: bold;
 }
 
 .listb {
-  font-size: 21px;
+  font-size: @font-pag-listb;
   color: #861946;
   font-weight: bold;
 }
 
 .cod1 {
-  font-size: 18px;
+  font-size: @font-pag-cod1;
   font-weight: bold;
 }
 
 .cod2 {
-  font-size: 16px;
+  font-size: @font-pag-cod2;
   font-weight: bold;
   color: #861946;
 }
@@ -176,17 +182,17 @@ div.pagx {
   text-indent: 30px;
 }
 
-.cap{
-    text-transform: capitalize;
+.cap {
+  text-transform: capitalize;
 }
-.upp{
-    text-transform: uppercase;
+.upp {
+  text-transform: uppercase;
 }
-.low{
-    text-transform: lowercase;
+.low {
+  text-transform: lowercase;
 }
 
-.caps{
+.caps {
   font-variant: small-caps;
 }
 
@@ -227,7 +233,7 @@ div.pagx {
 }
 
 .bck1 {
-  background: #C2C188;
+  background: #c2c188;
 }
 
 .bck2 {
@@ -388,7 +394,8 @@ div.pagx {
 
 .sup {
   vertical-align: super;
-  font-size: 12px;
+  font-size: @font-pag-sup;
+
 }
 
 div.img {
@@ -396,17 +403,16 @@ div.img {
   text-align: center;
 }
 
-div.fl_left{
-  float:left;
+div.fl_left {
+  float: left;
   margin-right: 10px;
 }
 
-div.fl_right{
-  float:right;
+div.fl_right {
+  float: right;
   margin-left: 10px;
 }
 
 .break {
-  clear:both;
+  clear: both;
 }
-
