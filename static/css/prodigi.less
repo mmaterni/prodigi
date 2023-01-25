@@ -28,12 +28,11 @@
 
 @menuv-width: 110px;
 @menuh-menuv-width: 130px;
-// @menuh-height: 75px;
-@menuh-height: 60px;
+@menuh-height: 50px;
 
 @foot-height: 50px;
 @foot-width: @body-width;
-@foot-top: @text-height+ @menuh-height+ @head-height+50px;
+@foot-top: @text-height+ @menuh-height+ @head-height + 50px;
 
 @foot2-height: 35px;
 @foot2-width: @foot-width;
@@ -44,7 +43,7 @@
 
 html {
   // AAA
-  box-sizing: border-box; 
+  // box-sizing: border-box;
   font-family: @fserif;
   .back_image;
 }
@@ -63,7 +62,7 @@ div {
   margin: 0;
 }
 
-.br1 {
+.br0 {
   background-color: red !important;
 }
 .test1 {
@@ -194,6 +193,8 @@ div {
   }
 }
 
+//AAA box-sizing: border-box;
+
 #menuh {
   position: absolute;
   top: @head-height;
@@ -216,8 +217,7 @@ div {
     a {
       padding: 0;
       margin: 0;
-
-      img {
+        img {
         padding: 0;
         margin: 0;
         max-height: @menuh-height;
@@ -240,8 +240,8 @@ div {
     display: block;
     margin: 0;
     padding: 0;
-    max-height: @menuh-height;
-    min-height: @menuh-height;
+    // max-height: @menuh-height;
+    // min-height: @menuh-height;
     width: auto;
 
     .b {
@@ -255,9 +255,8 @@ div {
       padding: 0;
       color: inherit;
       background: @menuh-item-back;
-      max-height: @menuh-height;
-      min-height: @menuh-height;
-
+      // max-height: @menuh-height;
+      // min-height: @menuh-height;
       a {
         background: inherit;
         color: inherit;
@@ -265,8 +264,10 @@ div {
         text-transform: uppercase;
         font-weight: bold;
         text-align: center;
-        padding: 0 10px 0 10px;
-        margin: 0 0 0 0;
+        padding-right: 10px;
+        padding-left: 10px;
+        // padding-bottom: 0px;
+        margin: 0;
         text-decoration: none;
         display: block;
         min-height: @menuh-height;
@@ -275,11 +276,13 @@ div {
 
         span {
           display: inline-block;
-          vertical-align: -40px;
+          vertical-align: -20px;
         }
-
         span.vcenter {
-          vertical-align: -35px;
+          vertical-align: -30px;
+        }
+        span.vcenter1 {
+          vertical-align: -20px;
         }
       }
 
