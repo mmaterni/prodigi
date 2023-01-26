@@ -31,11 +31,9 @@
 @foot2-width: @foot-width;
 @foot2-top: @foot-top+ @foot-height + 20px;
 
-@fserif: "Ties New Roman", Georgia, serif;
-// @fsans: arial, verdana, Helvetica, sans-serif;
 
 html {
-  font-family: @fserif;
+  font-family: "Ties New Roman", serif, helvetica, arial, verdana;
   .back_image;
 }
 
@@ -143,7 +141,6 @@ div {
     padding: 0;
   }
   div {
-    //border:1px solid #ff00ff;
     float: right;
     margin: 0;
     padding: 5px 0 0 0;
@@ -372,7 +369,7 @@ div {
 
 div.ua {
   position: absolute;
-  top: @menuh-height+ @head-height;
+  top: @menuh-height + @head-height;
 }
 
 div.text {
