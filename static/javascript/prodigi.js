@@ -9,23 +9,34 @@ var florimon_init = function (url) {
   pag(url);
 };
 
+
+// var pag = function(pag) {
+//   var url="./pag/"+pag;
+//     var call = function(rsp) {
+//         $('#ua').html(rsp.responseText);
+//     };
+//     UaRq.get(url, "", call, null, 'text');
+// };
+
+
 var pag = async function (pag) {
   const url = "./pag/" + pag;
-  fetch(url, {
-    method: 'GET',
-    headers: { "Content-Type": "text/plain;charset=UTF-8" },
-    cache: 'default'
-  })
-  .then((resp) => {
+  // fetch(url, {
+  //   method: 'GET',
+  //   headers: { "Content-Type": "text/plain;charset=UTF-8" },
+  //   cache: 'default'
+  // })
+  fetch(url)
+    .then((resp) => {
       if (resp.ok) return resp.text();
-      else throw `ERROR\n${url}`;      
-  })
-  .then((text) => {
-    $("#ua").html(text);
-  })
-  .catch((error) => {
+      else throw `ERROR\n${url}`;
+    })
+    .then((text) => {
+      $("#ua").html(text);
+    })
+    .catch((error) => {
       alert(`ERROR pag()\n${url}\n${error}`);
-  });
+    });
 };
 
 var menuh_init = function () {
@@ -122,7 +133,7 @@ close_pag = function () {
 var wopula;
 var open_ularead = function () {
   //XXX const url="http://127.0.0.1:5502/ularead/";
-  const url="http://martamaterni.it/ularead.html";
+  const url = "http://martamaterni.it/ularead.html";
   let op = `width=1200,height=900, top=100,left=100,
     scrollbars=1,
     resizable=1,
@@ -130,8 +141,8 @@ var open_ularead = function () {
     status=0,
     menubar=0,
     titlebar=0 `;
-    wopula = window.open("", "", op);
-    wopula.location.href = url;
+  wopula = window.open("", "", op);
+  wopula.location.href = url;
 };
 
 close_ularead = function () {
