@@ -1,67 +1,42 @@
-/** @format */
-
-@font-pag:19px;
-@font-pag-tit1:25px;
-@font-pag-tit2:24px;
-@font-pag-version:16px;
-@font-pag-parcnt:19px;
-@font-pag-bibliogr:17px;
-@font-pag-citl:18px;
-@font-pag-cits:18px;
-@font-pag-bibl:15px;
-@font-pag-url:13px;
-@font-pag-url1:16px;
-@font-pag-source:18px;
-@font-pag-list:15px;
-@font-pag-listb:21px;
-@font-pag-cod1:18px;
-@font-pag-cod2:16px;
-@font-pag-sup:12px;
-
-
-.brd1 {
-  border: 0px solid #ff4500;
+html {
+  font-family: "Times New Roman", serif, helvetica, arial, verdana;
 }
-.br0 {
-  background-color: red !important;
-}
-// html {
-//   font-family: "Times New Roman", serif, helvetica, arial, verdana;
-// }
 
+.brd1{
+    border:0px solid #ff4500;
+}
 
 div.pagx {
-  // font-family: "Times New Roman", serif, helvetica, arial, verdana;
   margin: 0;
-  padding: 10px 40px 5px 20px;
+  padding: 10px 40px 5px 40px;
   background: #e5e4cb;
   color: #300919;
   font-size: 19px;
-  // font-size: @font-pag;
   font-weight: normal;
   min-height: 930px;
   max-height: 930px;
   min-width: 1250px;
-  max-width: 1240px;
+  max-width: 1250px;
   line-height: 1.2;
   overflow: auto;
+  background-color: rgb(117, 234, 197) !important;
 }
 
 .tit1 {
-  font-size: @font-pag-tit1;
+  font-size: 25px;
   font-weight: bold;
   text-align: center;
   color: #5b112f;
 }
 
 .tit2 {
-  font-size: @font-pag-tit2;
+  font-size: 24px;
   color: #861946;
   text-transform: lowercase;
   font-variant: small-caps;
   font-weight: bold;
   margin-top: 60px;
-  margin-bottom: 30px;
+  margin-bottom: 30px
 }
 
 .tit3 {
@@ -71,7 +46,7 @@ div.pagx {
 }
 
 .tit4 {
-  font-size: @font-pag-tit2;
+  font-size: 24px;
   color: #861946;
   text-transform: lowercase;
   font-variant: small-caps;
@@ -79,7 +54,7 @@ div.pagx {
 }
 
 .version {
-  font-size: @font-pag-version;
+  font-size: 16px;
   font-weight: bold;
   color: #838383;
   margin-top: 10px;
@@ -92,12 +67,12 @@ div.pagx {
 .parcnt {
   text-align: center;
   margin: 15px;
-  font-size: @font-pag-parcnt;
+  font-size: 19px;
 }
 
 .bibliogr {
   text-align: justify;
-  font-size: @font-pag-bibliogr;
+  font-size: 17px;
 }
 .biblio {
   text-indent: 20px;
@@ -110,26 +85,26 @@ div.pagx {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: justify;
-  font-size: @font-pag-citl;
+  font-size: 18px;
   color: #5b112f;
   font-style: italic;
 }
 
 .cits {
-  font-size: @font-pag-cits;
+  font-size: 18px;
   color: #5b112f;
   font-style: italic;
 }
 
 .titwrk {
-  font-style: italic;
-  color: #5b112f;
+    font-style: italic;
+    color: #5b112f;
 }
 
 .site {
-  font-weight: bold;
-  font-variant: small-caps;
-  color: #5b112f;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: #5b112f;
 }
 
 .cit {
@@ -146,55 +121,55 @@ div.pagx {
 }
 
 .bibl {
-  font-size: @font-pag-bibl;
+  font-size: 15px;
   color: #9b1d51;
 }
 
 .url {
-  font-size: @font-pag-url;
+  font-size: 13px;
   color: #838383;
 }
 
 .url1 {
-  font-size: @font-pag-url1;
+  font-size: 16px;
   color: #5b112f;
 }
 
 .source {
-  font-size: @font-pag-source;
+  font-size: 16px;
   color: #838383;
 }
 
 .source1 {
-  font-size: @font-pag-source;
+  font-size: 16px;
   color: #5b112f;
   font-style: italic;
 }
 
 .ins {
-  font-size: @font-pag-source;
+  font-size: 16px;
   font-style: normal;
 }
 
 .list {
-  font-size: @font-pag-list;
+  font-size: 15px;
   color: #5b112f;
   font-weight: bold;
 }
 
 .listb {
-  font-size: @font-pag-listb;
+  font-size: 21px;
   color: #861946;
   font-weight: bold;
 }
 
 .cod1 {
-  font-size: @font-pag-cod1;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .cod2 {
-  font-size: @font-pag-cod2;
+  font-size: 16px;
   font-weight: bold;
   color: #861946;
 }
@@ -203,17 +178,17 @@ div.pagx {
   text-indent: 30px;
 }
 
-.cap {
-  text-transform: capitalize;
+.cap{
+    text-transform: capitalize;
 }
-.upp {
-  text-transform: uppercase;
+.upp{
+    text-transform: uppercase;
 }
-.low {
-  text-transform: lowercase;
+.low{
+    text-transform: lowercase;
 }
 
-.caps {
+.caps{
   font-variant: small-caps;
 }
 
@@ -254,7 +229,7 @@ div.pagx {
 }
 
 .bck1 {
-  background: #c2c188;
+  background: #C2C188;
 }
 
 .bck2 {
@@ -297,67 +272,67 @@ div.pagx {
   font-weight: normal;
 }
 
-// .fsz10 {
-//   font-size: 22px;
-// }
+.fsz10 {
+  font-size: 22px;
+}
 
-// .fsz11 {
-//   font-size: 27px;
-// }
+.fsz11 {
+  font-size: 27px;
+}
 
-// .fsz12 {
-//   font-size: 20px;
-// }
+.fsz12 {
+  font-size: 20px;
+}
 
-// .fsz08 {
-//   font-size: 17px;
-// }
+.fsz08 {
+  font-size: 17px;
+}
 
-// .fsz06 {
-//   font-size: 14px;
-// }
+.fsz06 {
+  font-size: 14px;
+}
 
-// .mgb10 {
-//   margin-bottom: 10px;
-// }
+.mgb10 {
+  margin-bottom: 10px;
+}.
 
-// .mgb20 {
-//   margin-bottom: 20px;
-// }
+.mgb20 {
+  margin-bottom: 20px;
+}
 
-// .mgt10 {
-//   margin-top: 10px;
-// }
+.mgt10 {
+  margin-top: 10px;
+}
 
-// .mgtb10 {
-//   margin-top: 10px;
-//   margin-bottom: 10px;
-// }
+.mgtb10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-// .mgt5 {
-//   margin-top: 5px;
-// }
+.mgt5 {
+  margin-top: 5px;
+}
 
-// .mgb5 {
-//   margin-bottom: 5px;
-// }
+.mgb5 {
+  margin-bottom: 5px;
+}
 
-// .mgtb5 {
-//   margin-top: 5px;
-//   margin-bottom: 5px;
-// }
+.mgtb5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
-// .mgt30 {
-//   margin-top: 30px;
-// }
+.mgt30 {
+  margin-top: 30px;
+}
 
 .mgb30 {
   margin-bottom: 30px;
 }
 
-// .mgb20 {
-//   margin-bottom: 20px;
-// }
+.mgb20 {
+  margin-bottom: 20px;
+}
 
 .mgb50 {
   margin-bottom: 50px;
@@ -367,23 +342,23 @@ div.pagx {
   margin-left: 30px;
 }
 
-// .mgr30 {
-//   margin-right: 30px;
-// }
+.mgr30 {
+  margin-right: 30px;
+}
 
-// .mglr30 {
-//   margin-left: 30px;
-//   margin-right: 30px;
-// }
+.mglr30 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
 
-// .mgr30 {
-//   margin-right: 30px;
-// }
+.mgr30 {
+  margin-right: 30px;
+}
 
-// .mglr100 {
-//   margin-left: 100px;
-//   margin-right: 100px;
-// }
+.mglr100 {
+  margin-left: 100px;
+  margin-right: 100px;
+}
 
 .mglr50 {
   margin-left: 50px;
@@ -405,17 +380,17 @@ div.pagx {
   font-style: normal;
 }
 
-// .txtu {
-//   text-decoration: underline;
-// }
+.txtu {
+  text-decoration: underline;
+}
 
-// .txtn {
-//   text-decoration: none;
-// }
+.txtn {
+  text-decoration: none;
+}
 
 .sup {
   vertical-align: super;
-  font-size: @font-pag-sup;
+  font-size: 12px;
 }
 
 div.img {
@@ -423,16 +398,17 @@ div.img {
   text-align: center;
 }
 
-div.fl_left {
-  float: left;
+div.fl_left{
+  float:left;
   margin-right: 10px;
 }
 
-div.fl_right {
-  float: right;
+div.fl_right{
+  float:right;
   margin-left: 10px;
 }
 
 .break {
-  clear: both;
+  clear:both;
 }
+
