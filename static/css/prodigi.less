@@ -180,45 +180,14 @@ div {
 }
 
 #menuh {
-  // box-sizing: border-box;
   position: absolute;
   top: @head-height;
   left: 0;
   padding: 0;
   margin: 0;
-  // display: inline-block;
-  // min-width: @body-width;
-  // max-width: @body-width;
   width: @body-width;
   color: @menuh-color;
   z-index: 11;
-  background-color: red !important;
-  // display: flex;
-  // flex-direction: row;
-  // align-items: center;
-  // justify-content: flex-start;
-  // list-style: none;
-
-  // div.title {
-  //   display: inline;
-  //   padding: 0;
-  //   margin: 0;
-  //   a {
-  //     padding: 0;
-  //     margin: 0;
-  //     max-width: @title-width;
-  //     min-width: @title-width;
-  //     // max-height: @menuh-height;
-  //     // min-height: @menuh-height;
-  //     background-color: yellowgreen;
-  //     img {
-  //       padding: 0;
-  //       margin: 0;
-  //       max-height: @menuh-height;
-  //       // min-height: @menuh-height;
-  //     }
-  //   }
-  // }
 
   .active {
     background: @menuh-item-active-back;
@@ -229,11 +198,6 @@ div {
   }
 
   ul {
-    // display: inline-block;
-    // margin: 0;
-    // padding: 0;
-    // width: auto;
-    // width:@body-width - @title-width -5px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -246,15 +210,10 @@ div {
       background: @menuh-itemb-back;
     }
 
-    li {
-      // float: left;
+    li {     
       flex: 2;
       position: relative;
       text-align: center;
-
-      // display: inline-block;
-      // margin: 0;
-      // padding: 0;
       color: inherit;
       background: @menuh-item-back;
       a {
@@ -275,7 +234,6 @@ div {
 
         span {
           display: inline-block;
-          // vertical-align: -20px;
         }
         span.vcenter {
           vertical-align: -35px;
@@ -336,7 +294,7 @@ div {
         min-width: @title-width;
         max-height: @menuh-height;
         min-height: @menuh-height;
-        background-color: blueviolet;
+        // background-color: blueviolet;
         img {
           max-height: @menuh-height;
           min-height: @menuh-height;
