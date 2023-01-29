@@ -1,23 +1,22 @@
 /** @format */
 
-@font-pag:19px;
-@font-pag-tit1:25px;
-@font-pag-tit2:24px;
-@font-pag-version:16px;
-@font-pag-parcnt:19px;
-@font-pag-bibliogr:17px;
-@font-pag-citl:18px;
-@font-pag-cits:18px;
-@font-pag-bibl:15px;
-@font-pag-url:13px;
-@font-pag-url1:16px;
-@font-pag-source:18px;
-@font-pag-list:15px;
-@font-pag-listb:21px;
-@font-pag-cod1:18px;
-@font-pag-cod2:16px;
-@font-pag-sup:12px;
-
+@font-pag: 19px;
+@font-pag-tit1: 25px;
+@font-pag-tit2: 24px;
+@font-pag-version: 16px;
+@font-pag-parcnt: 19px;
+@font-pag-bibliogr: 17px;
+@font-pag-citl: 18px;
+@font-pag-cits: 18px;
+@font-pag-bibl: 15px;
+@font-pag-url: 13px;
+@font-pag-url1: 16px;
+@font-pag-source: 18px;
+@font-pag-list: 15px;
+@font-pag-listb: 21px;
+@font-pag-cod1: 18px;
+@font-pag-cod2: 16px;
+@font-pag-sup: 12px;
 
 .brd1 {
   border: 0px solid #ff4500;
@@ -28,7 +27,6 @@
 // html {
 //   font-family: "Times New Roman", serif, helvetica, arial, verdana;
 // }
-
 
 div.pagx {
   // box-sizing: border-box;
@@ -50,6 +48,16 @@ div.pagx {
   overflow-y: scroll !important;
   // background-color: #d9b35b;
 
+  div.flex_row {
+    // border:1px solid black;
+    display: flex;
+    flex-flow: nowrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content:space-between;
+    margin: 0;
+    padding: 0;
+  }
   div.mgb10 {
     margin-bottom: 10px;
   }
@@ -77,7 +85,10 @@ div.pagx {
     margin-top: 30px;
   }
   div.mgb30 {
+    // width:auto;
+    // border:1px solid red;
     margin-bottom: 30px;
+
   }
   div.mgb20 {
     margin-bottom: 20px;
@@ -112,7 +123,6 @@ div.pagx {
   div.mgl180 {
     margin-left: 183px;
   }
-  
 }
 
 .tit1 {
@@ -384,7 +394,6 @@ div.pagx {
 // .fsz06 {
 //   font-size: 14px;
 // }
-
 
 .stli {
   font-style: italic;
