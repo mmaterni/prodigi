@@ -1,4 +1,5 @@
 /** @format */
+// @import "prodigivar.less";
 
 @font-pag: 19px;
 @font-pag-tit1: 25px;
@@ -29,7 +30,7 @@
 // }
 
 div.pagx {
-  // box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 10px 40px 5px 20px;
   background: #e5e4cb;
@@ -54,7 +55,7 @@ div.pagx {
     flex-flow: nowrap;
     flex-direction: row;
     align-items: stretch;
-    justify-content:space-between;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
   }
@@ -85,10 +86,7 @@ div.pagx {
     margin-top: 30px;
   }
   div.mgb30 {
-    // width:auto;
-    // border:1px solid red;
     margin-bottom: 30px;
-
   }
   div.mgb20 {
     margin-bottom: 20px;
@@ -199,15 +197,22 @@ div.pagx {
   font-style: italic;
 }
 
+
+// @mbar: darken(#406882,5%);
+// @msg-color:lighten(@mbar,15%);
+@msg-color:lighten(#406882,10%);
+
 .titwrk {
   font-style: italic;
-  color: #5b112f;
+  //aaa color: #5b112f;
+  color: @msg-color;
 }
 
 .site {
   font-weight: bold;
   font-variant: small-caps;
-  color: #5b112f;
+  // AAA color: #5b112f;
+  color: @msg-color;
 }
 
 .cit {
